@@ -10,5 +10,4 @@ Desarrollador:Santos Mendez
 Fecha: 2024-04-15
 Cambios:Ninguno
 */
-var mensasje="Imprimir en consola";
 console.log("Hola Mundo Externo, se vera?");
