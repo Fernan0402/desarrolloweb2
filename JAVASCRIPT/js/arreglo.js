@@ -34,7 +34,6 @@ carrito.push(item);
 console.log(carrito);*/
 //imprimir con Etiquetas
 //Adicionar un nuevo registro
-
 let item ={nombre:'leche',cantidad:1,precio:7.5};
 
 console.log("item"+item.nombre);
@@ -42,11 +41,31 @@ console.log("cantidad"+item.cantidad);
 console.log("precio"+item.precio+"Bs");
 console.log("total"+item.cantidad*item.precio+"Bs");
 
-let carrito=[{nombre:'leche',cantidad:1,precio:7.50},
-             {nombre:'carne',cantidad:2,precio:18},
-             {nombre:'fideo',cantidad:1,precio:4},
-             {nombre:'papa',cantidad:3,precio:5}];
+let carrito=[{nombre:'leche',cantidad:1,precio:7.5},
+             {nombre:'carne',cantidad:2,precio:30.5},
+             {nombre:'fideo',cantidad:1,precio:5.5},
+             {nombre:'papa',cantidad:3,precio:20.5}];
 
 console.log(carrito);
-item={nombre:'arroz',cantidad:5,precio:6};
+item={nombre:'arroz',cantidad:2,precio:30.5};
 carrito.push(item);
+
+
+//funciones en javascript como ordenar un array normal y un array con estructuras
+//ordenar un array de carrito
+//ordenar un array lineal
+// Array ordenado utilizando el metodo sort()
+/*
+let numeros = [4, 2, 5, 1, 3];//Declaracion del array llamado numero
+numeros.sort((a, b) => a - b);// El metodo sort() se utiliza para ordenar los elementos 
+console.log(numeros);
+*/
+console.log("IMPRESION ORDENADO POR PRECIO");
+let carritoOrdenadoPorPrecio = carrito.slice().sort((a,b) =>a.precio - b.precio);
+console.log(carritoOrdenadoPorPrecio);
+
+console.log("IMPRESION ORDENADO POR NOMBRE");
+let carritoOrdenadoPorNombre = carrito.slice().sort((a,b)=> a.nombre.localeCompare(b.nombre));
+console.log(carritoOrdenadoPorNombre)
+
+

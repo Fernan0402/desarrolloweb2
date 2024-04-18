@@ -1,3 +1,4 @@
+// Función para generar un número aleatorio entre un rango dado
 let Notas = [
     { nombre: 'Juan', nota: 0 },
     { nombre: 'Maria', nota: 0 },
@@ -34,4 +35,3 @@ let promedioNotas = sumaNotas / NotasRandom.length;
 console.log("Nota más alta: " + notaMasAlta);
 console.log("Nota más baja: " + notaMasBaja);
 console.log("Promedio de las notas: " + promedioNotas);
-
