@@ -12,13 +12,40 @@ let Notas = [
     { nombre: 'Mario', nota: 0 }
 ];
 
-console.log("Arreglo con notas en 0:");
-console.log(Notas);
+//console.log("Arreglo con notas en 0:");
+//console.log(Notas);
 // Se utiliza la funcion map que recorre cada elemento del arreglo
-let NotasRandom=Notas.map(alumno =>({...alumno}));// se utiliza el operador ...alumno que evita la modificacion de los objetos originales
-NotasRandom.forEach((alumno) => {
-    alumno.nota = Math.floor(Math.random() * 81) + 20; // Genera un número aleatorio entre 20 y 100
+// se utiliza el operador ...alumno que evita la modificacion de los objetos originales
+Notas.forEach(nota => {
+    nota.nota = Math.floor(Math.random() *(10-2+1)+2); // Genera un número aleatorio entre 2-10
 });
+
+Notas.forEach(nota=>{
+    let $clasificar;
+    switch(nota.nota){
+        case 2: case 3: case 4:
+            $clasificar="Insuficiente";
+            break;
+        case 5: case 6:
+            $clasificar="Suficiente";
+            break;
+        case 7: case 8:
+            $clasificar="Bien";
+            break;
+        case 9:
+            $clasificar="Notable";
+            break;
+        case 10:
+            $clasificar="Sobresaliente";
+            break;
+        default:
+            $clasificar="Fuera de rango";
+    }
+    console.log(nota.nombre+" - "+ nota.nota+ ": "+$clasificar+"\n");
+});
+
+
+/*
 console.log("Arreglo actualizado con notas aleatorias entre 20 y 100:");
 console.log(NotasRandom);
 
@@ -35,3 +62,16 @@ let promedioNotas = sumaNotas / NotasRandom.length;
 console.log("Nota más alta: " + notaMasAlta);
 console.log("Nota más baja: " + notaMasBaja);
 console.log("Promedio de las notas: " + promedioNotas);
+
+
+/*
+ Genera un array de 10 elementos
+ Nombre:" " nota: "0" luego actualizar el array con natas randomico entre 2-10.
+ Mostrar la nota mayor, menor y promedio.
+ Listar las notas
+ Insuficiente:[2, 4]
+ Suficiente:[5,6]
+ Bien:[7,8]
+ Notable:[9]
+ Sobresaliente:[10].
+*/
