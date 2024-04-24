@@ -1,0 +1,59 @@
+<!--Realizar un formulario de registro de estudiantes
+Datos:
+CI. -entero
+nombre -> string
+fecha -> date
+direccion -> string
+Registrar en un array.
+Listarlo 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Estudiantes</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container needs-validation"novalidation>
+    <h1 class="text-center mt-3">Registro de Estudiantes</h1>
+    <form id="formulario" class="mt-3">
+        <div class="form-group">
+            <label for="ci">CI:</label>
+            <input type="text" class="form-control" id="ci" name="ci" required>
+        </div>
+        <div class="form-group">
+            <label for="validationCustom01" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" placeholder="Nombre" id="validationCustom01" required>
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" name="direccion">
+        </div>
+        <button type="button" class="btn btn-primary" id="btn-registrar">Registrar</button>
+    </form>
+    <h2 class="text-center mt-4">Listado de Estudiantes</h2>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>CI</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Dirección</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="body-estudiantes"></tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/Form01.js"></script>
+</body>
+</html>
