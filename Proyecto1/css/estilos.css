@@ -404,7 +404,7 @@
 	position: absolute;
 	top: 20%;
 	right: 32%;
-	color: #312828;
+	color: #282626;
 }
 .hp img{	
 	width: 150px;
@@ -412,6 +412,7 @@
 	padding: 10px;
 	transition: all 1s;
 	animation: mover 1s alternate ;
+	border-radius: 25%;
 }.hp img:hover{transform: scale(1.2); transition: all 0.5s;}
 .canon img{
 	width: 200px;
@@ -419,6 +420,7 @@
 	padding: 10px;
 	transition: all 1s;
 	animation: mover 1s alternate;
+	border-radius: 25%;
 }.canon img:hover{transform: scale(1.2); transition: all 0.5s;}
 .dell img{
 	width: 140px;
@@ -426,6 +428,8 @@
 	padding: 10px;
 	transition: all 1s;
 	animation: mover 1s alternate;
+	border-radius: 25%;
+
 }.dell img:hover{transform: scale(1.1); transition: all 0.5s;}
 .brother img{
 	width: 200px;
@@ -433,6 +437,7 @@
 	padding: 10px;
 	transition: all 1s;
 	animation: mover 1s alternate;
+	border-radius: 25%;
 }.brother img:hover{transform: scale(1.2); transition: all 0.5s;}
 .epson img{
 	width: 150px;
@@ -442,6 +447,7 @@
 	transition: all 1s;
 	transform: scale(1.1);
 	animation: mover 1s alternate;
+	border-radius: 25%;
 }.epson img:hover{transform: scale(1.3); transition: all 0.5s;}
 .modeloimpresoras div{
 	padding: 20px;
@@ -456,8 +462,15 @@
 }
 .modeloimpresoras div p{
 	font-family: arial;
-	color: #441919;
+	color: #810000;
 	animation: mover2 2s alternate;
+}
+.print{
+	background: url(../img/fondo/fondo.jpg);
+	width: 100%;
+	height: 850px;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 @keyframes mover{
@@ -480,7 +493,7 @@
 	transition: all 0.5s;
 }.ofertas .antes:hover{}
 .ofertas p{
-	color: #221b1b5d;
+	color: #777575;
 	font-weight: bold;
 	width: 80%;
 	left: 10%;
@@ -540,7 +553,7 @@
 	color: #9F9F9F;
 }
 .ahora a{
-	color: rgb(116, 116, 116);
+	color: red;
 	text-decoration: none;
 	font-weight: bold;
 }.ahora a:hover{text-decoration: underline}
@@ -574,7 +587,7 @@
 	width: 125px;
 }
 .dentro_text{
-	color: #cf2323;
+	color: #6F6F6F;
 	font-size: 15px;
 	text-align: center;
 }
@@ -734,16 +747,20 @@ label{font-weight: bold; background: rgba(0,0,0,0.7); color: white; padding: 7px
 	width: 100%;
 	text-align: center;
 	top: 8%;
+	background:url(../img/fondo/FondoImp.jpg);
 }
 .modelos_de_estilos img{
-	width: 50%;
+	width: 60%;
 	animation: aparecer 1s alternate;
 }
+
 .estilos_de_modelos{
 	width: 30%;
 	margin: 5% 35%;	
 	position: relative;
 	animation:aparecer 1s alternate;
+	background-color: hsl(188, 100%, 77%);
+	border-radius: 15%;
 }
 .hpfixed, .brotherfixed, .dellfixed, .canonfixed, .epsonfixed{
 	width: 150px;
@@ -752,6 +769,9 @@ label{font-weight: bold; background: rgba(0,0,0,0.7); color: white; padding: 7px
 	top:280px;
 	position: fixed;
 	animation: desvanecer 2s alternate infinite;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	border-radius: 10%;
 }
 
 @keyframes desvanecer {
